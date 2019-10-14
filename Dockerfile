@@ -9,13 +9,16 @@ COPY .meteor /tmp/.meteor/
 
 WORKDIR /tmp/
 
-EXPOSE 3000
+EXPOSE 8080
 
-# Build the app
-RUN meteor npm install
+RUN wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/backend-project/node/meteor/build.sh
+RUN chmod 775 ./build.sh
+RUN sh build.sh
 
 # Add extra docker commands here (if any)...
 
 # Run the app
-CMD meteor run --allow-superuser
+RUN wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/backend-project/node/meteor/run.sh
+RUN chmod 775 ./run.sh
+CMD sh run.sh
 
