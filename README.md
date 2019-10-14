@@ -16,9 +16,9 @@ PROJECT START STEPS:
         1.a. Go to the project root directory.
         1.b. Run the following commands in the terminal/command line to build the app:
             - meteor npm install
-            - meteor run
+            - meteor run --port 8080
     
-    2. Go to http://localhost:3000 in your browser to view it.
+    2. Go to http://localhost:8080 in your browser to view it.
 
 
 DOCKER START STEPS:
@@ -34,10 +34,10 @@ DOCKER START STEPS:
 
     2. Run the image in a container (Make sure port 3000 is available):        
         2.a. Run the following command(s) in the terminal/command line:
-            - docker run -i -p 3000:3000 meteor1.8-in-docker
+            - docker run -i -p 8080:8080 meteor1.8-in-docker
         2.b. Check the logs for any errors. 
 
-    3. Go to http://localhost:3000 in your browser to view it.
+    3. Go to http://localhost:8080 in your browser to view it.
 
 DOCKER STOP STEPS:
 
