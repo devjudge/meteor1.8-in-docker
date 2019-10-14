@@ -1,5 +1,11 @@
 FROM geoffreybooth/meteor-base:1.8.1
 
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get update
+RUN apt-get -yq install curl wget
+RUN curl -sL https://deb.nodesource.com/setup_11.x  | bash -
+RUN apt-get -yq install nodejs
+
 COPY client /tmp/client/
 COPY tests /tmp/tests/
 COPY server /tmp/server/
