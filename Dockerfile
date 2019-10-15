@@ -11,6 +11,7 @@ COPY tests /tmp/tests/
 COPY server /tmp/server/
 COPY package.json /tmp/
 COPY package-lock.json /tmp/
+COPY .meteor /tmp/.meteor/
 
 WORKDIR /tmp/
 
